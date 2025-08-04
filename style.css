@@ -1,0 +1,193 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
+  background-color: #fff;
+}
+
+/* ======== HEADER ======== */
+
+/* Judul Tengah Atas */
+.page-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #004aad;
+  padding: 15px 10px 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Bar Navigasi */
+.header-container {
+  display: flex;
+  align-items: center;
+  /*justify-content: space-between;*/
+  padding: 30px 40px;
+  border-bottom: 1px solid #e7e3e3;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 70px;
+}
+
+.title-nav-container {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.main-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0057b7;
+  margin: 0;
+}
+
+.nav-menu {
+  margin-top: 5px;
+}
+
+.nav-menu a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.nav-menu a:hover {
+  color: orange;
+}
+
+/* RESPONSIF HEADER */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-logo {
+    margin-bottom: 10px;
+  }
+  .right-menu {
+    margin-top: 10px;
+  }
+}
+
+/* ======== HOME Section ======== */
+.home-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.home-section h1 {
+  font-size: 22px;
+}
+
+.button-group {
+  margin-top: 30px;
+}
+
+.btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: orange;
+}
+
+/* ======== TIMELINE ======== */
+.timeline-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.timeline-section h2 {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.timeline-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 220px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.timeline-card img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.timeline-card .tanggal {
+  font-weight: bold;
+  margin: 5px 0;
+  color: #333;
+}
+
+.timeline-card .judul {
+  font-size: 14px;
+  color: #555;
+}
+
+.footer {
+  background-color: #f9f9f9;
+  padding: 10px 20px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer .icon {
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* ======== RESPONSIF TIMELINE ======== */
+@media (max-width: 768px) {
+  .timeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+}
