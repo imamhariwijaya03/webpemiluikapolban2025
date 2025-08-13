@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendaftaran Calon Ketua IKA POLBAN</title>
+<link rel="stylesheet" href="stylecalonketua.css">
+</head>
+<body>
+<div class="form-container blue-bg">
+    <h2>PENDAFTARAN SEBAGAI <br> CALON KETUA IKA POLBAN</h2>
+    <form id="pendaftaranForm">
+        <input type="text" name="nama" placeholder="Nama Lengkap">
+        <input type="text" name="ttl" placeholder="Tempat, Tanggal Lahir">
+        <input type="text" name="prodi" placeholder="Prodi / Jurusan">
+        <input type="text" name="angkatan" placeholder="Angkatan">
+        <input type="text" name="nim" placeholder="NIM">
+        <input type="text" name="hp" placeholder="Nomor HP aktif">
+        <input type="email" name="email" placeholder="Email aktif">
+        <input type="text" name="alamat" placeholder="Alamat Domisili">
+        <input type="text" name="media" placeholder="Media sosial (opsional)">
+        <input type="text" name="riwayat" placeholder="Riwayat Organisasi/Profesi">
+        <button type="submit" class="btn">Daftar</button>
+    </form>
+</div>
+
+<script>
+document.getElementById("pendaftaranForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    const inputs = this.querySelectorAll("input[type=text], input[type=email]");
+    for(let input of inputs){
+        if(input.value.trim() === "" && input.name !== "media"){
+            alert(`Mohon lengkapi data ${input.placeholder} terlebih dahulu!`);
+            input.focus();
+            return;
+        }
+    }
+    alert("Anda sudah terdaftar. Silahkan lanjut Unggah Dokumen Persyaratan");
+    window.location.href = "Unggah Syarat Calon Ketua.html";
+});
+</script>
+</body>
+</html>

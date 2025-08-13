@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: url('bg.jpg') no-repeat center center/cover;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.blue-bg { background: rgba(0, 123, 255, 0.85); }
+.orange-bg { background: rgba(255, 165, 0, 0.85); }
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input, button, label {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type=text], input[type=email], input[type=file] {
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.8);
+}
+
+.btn {
+    padding: 10px;
+    background: orange;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: green;
+}
