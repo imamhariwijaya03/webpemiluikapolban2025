@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
       padding: 0;
       background-color: #f4f4f4;
     }
+
     header {
       background-color: #004aad;
       color: #fff;
@@ -20,32 +22,147 @@
       align-items: center;
       justify-content: space-between;
     }
+
     header img {
       height: 60px;
     }
+
     header h1 {
       flex-grow: 1;
       text-align: center;
       font-size: 1.5rem;
       margin: 0;
     }
+
     main {
       padding: 20px;
       max-width: 900px;
       margin: auto;
       background-color: #fff;
     }
+
     h2 {
       color: #004aad;
       border-bottom: 2px solid #004aad;
       padding-bottom: 5px;
     }
-    ul, ol {
+
+    ul,
+    ol {
       margin-left: 20px;
     }
+
     section {
       margin-bottom: 30px;
     }
+
+    /* Bagian Download Persyaratan */
+    .form-container {
+      margin-top: 25px;
+    }
+
+    .form-container h3 {
+      color: #004aad;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .form-container div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .form-container a {
+      text-decoration: none;
+    }
+
+    .form-container button {
+      flex: 1 1 calc(50% - 10px);
+      /* 2 tombol per baris di desktop */
+      min-width: 875px;
+      padding: 10px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .form-container button:hover {
+      background-color: linear-gradient(90deg, orange, #ff6a00);;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsif untuk HP */
+    @media (max-width: 600px) {
+      .form-container button {
+        flex: 1 1 100%;
+        /* 1 tombol per baris di layar kecil */
+      }
+    }
+
+
+    .btn-container {
+      text-align: center;
+      /* Membuat tombol berada di tengah */
+      margin-top: 20px;
+    }
+
+    .btn-container .btn {
+      width: auto;
+      /* Supaya tidak terlalu lebar */
+      min-width: 200px;
+      /* Ukuran minimal tombol */
+    }
+
+    .btn {
+      width: 30%;
+      padding: 12px;
+      margin: 10px;
+      background: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, orange, #ff6a00);;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Tombol Kembali */
+    .back-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .back-container button {
+      min-width: 150px;
+      padding: 10px 20px;
+      background: linear-gradient(90deg, orange, #ff6a00);;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .back-container button:hover {
+      background: linear-gradient(90deg,  #1976d2, #0057b7);;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+
     footer {
       text-align: center;
       padding: 10px;
@@ -55,6 +172,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <img src="images/logo POKJA.png" alt="Logo POKJA">
@@ -73,7 +191,8 @@
         <li>Sehat jasmani dan rohani</li>
         <li>Bebas narkotika, prekursor, dan zat adiktif lainnya</li>
         <li>Tidak pernah dipidana penjara berdasarkan putusan pengadilan yang telah memiliki kekuatan hukum tetap</li>
-        <li>Mengirimkan Daftar Riwayat Hidup, Form Kesediaan Bakal Calon, dan Surat Keterangan dari IKATAN ALUMNI Jurusan/Prodi</li>
+        <li>Mengirimkan Daftar Riwayat Hidup, Form Kesediaan Bakal Calon, dan Surat Keterangan dari IKATAN ALUMNI
+          Jurusan/Prodi</li>
         <li>Memiliki Tim Sukses</li>
       </ol>
     </section>
@@ -81,20 +200,67 @@
     <section>
       <h2>Dokumen Administratif</h2>
       <ol>
-        <li><strong>Surat Pernyataan Kesediaan:</strong> menunjukkan bahwa calon bersedia untuk dicalonkan dan menjabat sebagai Ketua Ikatan Alumni</li>
-        <li><strong>Curriculum Vitae (CV):</strong> mencantumkan riwayat hidup, pengalaman kerja, dan kontribusi pada organisasi</li>
+        <li><strong>Surat Pernyataan Kesediaan:</strong> menunjukkan bahwa calon bersedia untuk dicalonkan dan menjabat
+          sebagai Ketua Ikatan Alumni</li>
+        <li><strong>Curriculum Vitae (CV):</strong> mencantumkan riwayat hidup, pengalaman kerja, dan kontribusi pada
+          organisasi</li>
         <li><strong>Surat Keterangan:</strong> dari Ketua Ikatan Alumni Prodi/Jurusan</li>
         <li><strong>Visi dan Misi:</strong> dokumen berisi rencana kerja selama masa jabatan</li>
         <li><strong>Pas Foto:</strong> ukuran 3×4 terbaru dengan resolusi tinggi</li>
         <li><strong>Daftar Riwayat Organisasi:</strong> jika pernah aktif dalam organisasi alumni</li>
         <li><strong>Data Tim Sukses:</strong> berisi anggota tim sukses dari alumni, boleh lintas jurusan</li>
-        <li><strong>Surat Pernyataan Tidak Pernah Dipidana:</strong> sebagai bukti tidak pernah menjalani hukuman penjara</li>
+        <li><strong>Surat Pernyataan Tidak Pernah Dipidana:</strong> sebagai bukti tidak pernah menjalani hukuman
+          penjara</li>
       </ol>
     </section>
+
+
+    <!-- Bagian download persyaratan -->
+    <div class="form-container" style="margin-top: 20px;">
+      <h3 style="color: #004aad;">Unduh File Persyaratan</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <a href="[termplate] Surat Pernyataan Kesediaan Calon Ketua IKA POLBAN.docx" download>
+          <button class="btn">Surat Pernyataan Kesediaan</button>
+        </a>
+        <a href="[template] Surat Keterangan IKA Prodi Jurusan.docx" download>
+          <button class="btn">Surat Keterangan IA Prodi </button>
+        </a>
+        <a href="[Template] Daftar Nama Tim Sukses.docx" download>
+          <button class="btn">Daftar Nama Tim Sukses</button>
+        </a>
+        <a href="[termplate] Surat Pernyataan Tidak Dipidana, Sehat Jasmani dan Rohani, Tidak Menggunakan Narkoba.docx"
+          download>
+          <button class="btn">Surat Pernyataan Tidak Pernah Dipidana</button>
+        </a>
+      </div>
+    </div>
+    </section>
+
+
   </main>
+
+  <div class="btn-container">
+    <a href="Daftar Calon Ketua.html">
+      <button class="btn">
+        Daftar Menjadi Calon
+      </button>
+    </a>
+    <a href="Unggah Syarat Calon Ketua.html">
+      <button class="btn">
+        Unggah Persyaratan
+      </button>
+    </a>
+  </div>
+
+  <!-- Tombol Kembali -->
+  <div class="back-container">
+    <button onclick="history.back()">⬅ Kembali</button>
+  </div>
+
 
   <footer>
     &copy; 2025 POKJA PEMILU IKA POLBAN
   </footer>
 </body>
+
 </html>

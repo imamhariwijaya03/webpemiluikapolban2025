@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PEMILU IKA POLBAN</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-   <header class="header-container">
+  <header class="header-container">
     <div class="logo-container">
       <a href="#home"><img src="images/logo POKJA.png" alt="Logo 1" class="logo"></a>
       <a href="#home"><img src="images/logo IKA POLBAN.png" alt="Logo 2" class="logo"></a>
@@ -21,11 +23,17 @@
         <a href="#timeline">TIME LINE</a>
       </nav>
     </div>
+
+    <div class="logo-container">
+      <a href="#home"><button class="btn">Daftar</button></a>
+      <button class="btn" onclick="window.location.href='login.php'">Login</button>
+    </div>
   </header>
 
   <!-- HOME Section -->
   <section id="home" class="home-section">
-    <h1>Pemilihan Ketua Ikatan Keluarga Alumni Politeknik Negeri Bandung (IKA POLBAN) 2025 - 2029 akan segera diselenggarakan.</h1>
+    <h1>Pemilihan Ketua Ikatan Keluarga Alumni Politeknik Negeri Bandung (IKA POLBAN) 2025 - 2029 akan segera
+      diselenggarakan.</h1>
     <br><br>
     <p><strong>Saatnya membawa IKA POLBAN menuju masa depan yang lebih baik.</strong></p>
     <p><em>Pendaftaran sebagai calon ketua dan pemilih akan segera dibuka.</em></p>
@@ -86,6 +94,14 @@
     </div>
   </section>
 
+  <div class="btn-daftarcalon">
+    <a href="Daftar Calon Ketua.html">
+      <button class="btn">
+        Daftar Menjadi Calon
+      </button>
+    </a>
+  </div>
+
   <!-- Smooth Scroll -->
   <script>
     document.querySelectorAll('.main-header a, .left-logo a').forEach(anchor => {
@@ -104,11 +120,16 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
-      <span><a href="https://www.instagram.com/pokjaikapolban" target="_blank"><img src="images/IG.png" alt="IG" class="icon"> pokjaikapolban</span></a>
-      <span><a href="https://www.instagram.com/ikapolban_official" target="_blank"><img src="images/IG.png" alt="IG" class="icon"> ikapolban_official</span></a>
-      <span><a href="https://ikapolban.or.id" target="_blank"><img src="images/web.png" alt="Web" class="icon" > ikapolban.or.id</span></a>
-      <span><a href="mailto:pokjapemilu@ikapolban.or.id" target="_blank"><img src="images/email.png" alt="Email" class="icon"> pokjapemilu@ikapolban.or.id</span></a>
+      <span><a href="https://www.instagram.com/pokjaikapolban" target="_blank"><img src="images/IG.png" alt="IG"
+            class="icon"> pokjaikapolban</span></a>
+      <span><a href="https://www.instagram.com/ikapolban_official" target="_blank"><img src="images/IG.png" alt="IG"
+            class="icon"> ikapolban_official</span></a>
+      <span><a href="https://ikapolban.or.id" target="_blank"><img src="images/web.png" alt="Web" class="icon">
+          ikapolban.or.id</span></a>
+      <span><a href="mailto:pokjapemilu@ikapolban.or.id" target="_blank"><img src="images/email.png" alt="Email"
+            class="icon"> pokjapemilu@ikapolban.or.id</span></a>
     </div>
+    <p> &copy; Pokja IKAPOLBAN 2025</p>
   </footer>
 
 

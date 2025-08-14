@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
       padding: 0;
       background-color: #f9f9f9;
     }
+
     header {
       background-color: #004aad;
       color: #fff;
@@ -20,29 +22,91 @@
       align-items: center;
       justify-content: space-between;
     }
+
     header img {
       height: 70px;
     }
+
     header h1 {
       flex-grow: 1;
       text-align: center;
       margin: 0;
       font-size: 1.5rem;
     }
+
     main {
       padding: 20px;
       max-width: 800px;
       margin: auto;
       background-color: #fff;
     }
+
     h2 {
       color: #004aad;
       border-bottom: 2px solid #004aad;
       padding-bottom: 5px;
     }
+
     ol {
       margin-left: 20px;
     }
+
+    .btn-container {
+      text-align: center;
+      /* Membuat tombol berada di tengah */
+      margin-top: 20px;
+    }
+
+    .btn-container .btn {
+      width: auto;
+      /* Supaya tidak terlalu lebar */
+      min-width: 200px;
+      /* Ukuran minimal tombol */
+    }
+
+    .btn {
+      width: 30%;
+      padding: 12px;
+      margin: 10px;
+      background: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background:linear-gradient(90deg, orange, #ff6a00);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+     /* Tombol Kembali */
+    .back-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .back-container button {
+      min-width: 150px;
+      padding: 10px 20px;
+      background: linear-gradient(90deg, orange, #ff6a00);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .back-container button:hover {
+      background: linear-gradient(90deg,  #1976d2, #0057b7);;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
     footer {
       text-align: center;
       padding: 10px;
@@ -52,9 +116,10 @@
     }
   </style>
 </head>
+
 <body>
   <header>
-    <img src="logo1.png" alt="Logo IKA POLBAN">
+    <img src="images/logo POKJA.png" alt="Logo IKA POLBAN">
     <h1>Syarat Menjadi Pemilih</h1>
     <span style="width: 70px;"></span> <!-- spacer agar judul tetap di tengah -->
   </header>
@@ -69,8 +134,22 @@
     </section>
   </main>
 
+  <div class="btn-container">
+    <a href="#">
+      <button class="btn">
+        Daftar Sebagai Pemilih
+      </button>
+    </a>
+  </div>
+
+  <!-- Tombol Kembali -->
+  <div class="back-container">
+    <button onclick="history.back()">⬅ Kembali</button>
+  </div>
+
   <footer>
     &copy; 2025 POKJA PEMILU IKA POLBAN
   </footer>
 </body>
+
 </html>

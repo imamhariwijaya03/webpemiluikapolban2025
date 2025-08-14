@@ -1,56 +1,65 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unggah Dokumen Persyaratan</title>
-<link rel="stylesheet" href="stylecalonketua.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unggah Dokumen Persyaratan</title>
+    <link rel="stylesheet" href="stylecalonketua.css">
 </head>
+
 <body>
-<div class="form-container orange-bg">
-    <h2>UNGGAH DOKUMEN PERSYARATAN</h2>
-    <form id="unggahForm">
-        <label>Surat Pernyataan Kesediaan (PDF)</label>
-        <input type="file" name="kesediaan" accept=".pdf">
+    <div class="form-containerorange-bg">
+        <h2><span style="color: orangered;">UNGGAH DOKUMEN</span> PERSYARATAN</h2>
+        <form id="unggahForm">
+            <label>Surat Pernyataan Kesediaan (PDF)</label>
+            <input type="file" name="kesediaan" accept=".pdf">
 
-        <label>Curriculum Vitae (PDF)</label>
-        <input type="file" name="cv" accept=".pdf">
+            <label>Curriculum Vitae (PDF)</label>
+            <input type="file" name="cv" accept=".pdf">
 
-        <label>Surat Keterangan (PDF)</label>
-        <input type="file" name="keterangan" accept=".pdf">
+            <label>Surat Keterangan (PDF)</label>
+            <input type="file" name="keterangan" accept=".pdf">
 
-        <label>Visi dan Misi (PDF)</label>
-        <input type="file" name="visi" accept=".pdf">
+            <label>Visi dan Misi (PDF)</label>
+            <input type="file" name="visi" accept=".pdf">
 
-        <label>Pas Foto (JPG, JPEG, PNG, PDF)</label>
-        <input type="file" name="foto" accept=".jpg,.jpeg,.png,.pdf">
+            <label>Pas Foto (JPG, JPEG, PNG, PDF)</label>
+            <input type="file" name="foto" accept=".jpg,.jpeg,.png,.pdf">
 
-        <label>Daftar Riwayat Organisasi (PDF)</label>
-        <input type="file" name="riwayat" accept=".pdf">
+            <label>Daftar Riwayat Organisasi (PDF)</label>
+            <input type="file" name="riwayat" accept=".pdf">
 
-        <label>Data Tim Sukses (PDF)</label>
-        <input type="file" name="tim" accept=".pdf">
+            <label>Data Tim Sukses (PDF)</label>
+            <input type="file" name="tim" accept=".pdf">
 
-        <label>Surat Pernyataan tidak pernah dipidana, sehat jasmani/rohani dan bebas narkoba (PDF)</label>
-        <input type="file" name="sehat" accept=".pdf">
+            <label>Surat Pernyataan tidak pernah dipidana, sehat jasmani/rohani dan bebas narkoba (PDF)</label>
+            <input type="file" name="sehat" accept=".pdf">
 
-        <button type="submit" class="btn">Unggah</button>
-    </form>
-</div>
+            <button type="submit" class="btn">Unggah</button>
+        </form>
+    </div>
 
-<script>
-document.getElementById("unggahForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    const inputs = this.querySelectorAll("input[type=file]");
-    for(let input of inputs){
-        if(!input.files.length){
-            alert(`Mohon upload ${input.previousElementSibling.innerText}!`);
-            return;
-        }
-    }
-    alert("Dokumen persyaratan sudah diunggah");
-    window.location.href = "index.html";
-});
-</script>
+    <script>
+        document.getElementById("unggahForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const inputs = this.querySelectorAll("input[type=file]");
+            for (let input of inputs) {
+                if (!input.files.length) {
+                    alert(`Mohon upload ${input.previousElementSibling.innerText}!`);
+                    return;
+                }
+            }
+            alert("Dokumen persyaratan sudah diunggah");
+            window.location.href = "index.html";
+        });
+    </script>
+    
+    <!-- Tombol Kembali -->
+    <div class="back-container">
+        <button onclick="history.back()">⬅ Kembali</button>
+    </div>
+
 </body>
+
 </html>
