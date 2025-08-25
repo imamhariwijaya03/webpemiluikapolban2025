@@ -1,13 +1,23 @@
-/* * {
-  outline: 1px solid black;
-} */
+/* ======== COLOR PALETTE ======== */
+:root {
+  --primary: #004aad;
+  --secondary: #007bff;
+  --accent: #ff6a00;
+  --success: #16e762;
+  --whatsapp: #25D366;
+  --background: #ffffff;
+  --background-alt: #f4f7fb;
+  --text: #333;
+  --text-light: #fff;
+}
 
+/* ======== FONT ======== */
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   margin: 0;
   scroll-behavior: smooth;
-  background-color: #ffffff;
-  color: #333;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 /* ======== HEADER ======== */
@@ -15,9 +25,8 @@ body {
   display: flex;
   align-items: center;
   padding: 20px 40px;
-  background: linear-gradient(90deg, #004aad, #007bff);
-  color: white;
-  border-bottom: none;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: var(--text-light);
   flex-wrap: wrap;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
@@ -50,13 +59,13 @@ body {
 .nav-menu a {
   margin: 0 12px;
   text-decoration: none;
-  color: white;
+  color: var(--text-light);
   font-weight: 600;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-menu a:hover {
-  color: orange;
+  color: var(--accent);
   transform: translateY(-2px);
 }
 
@@ -64,12 +73,12 @@ body {
 .home-section {
   padding: 70px 20px;
   text-align: center;
-  background: linear-gradient(180deg, #f9f9f9, #ffffff);
+  background: linear-gradient(180deg, #f9f9f9, var(--background));
 }
 
 .home-section h1 {
   font-size: 24px;
-  color: #004aad;
+  color: var(--primary);
 }
 
 .button-group {
@@ -80,10 +89,11 @@ body {
   text-align: center;
 }
 
+/* ======== BUTTON ======== */
 .btn {
-  background: linear-gradient(90deg, #007BFF, #0057b7);
-  color: white;
-  border: 1px solid white;
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  color: var(--text-light);
+  border: 1px solid var(--text-light);
   padding: 14px 24px;
   margin: 10px;
   font-size: 16px;
@@ -94,22 +104,35 @@ body {
 }
 
 .btn:hover {
-  background: linear-gradient(90deg, orange, #ff6a00);
+  background: linear-gradient(90deg, var(--accent), var(--accent));
+  color: var(--text-light);
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Tombol WhatsApp khusus */
+.btn-wa, #floating-wa {
+  background: var(--whatsapp) !important;
+  color: var(--text-light) !important;
+  border: none;
+}
+
+.btn-wa:hover, #floating-wa:hover {
+  background: #128C7E !important;
+  color: var(--text-light) !important;
 }
 
 /* ======== TIMELINE ======== */
 .timeline-section {
   padding: 50px 20px;
   text-align: center;
-  background-color: #f4f7fb;
+  background-color: var(--background-alt);
 }
 
 .timeline-section h2 {
   margin-bottom: 30px;
   font-size: 22px;
-  color: #004aad;
+  color: var(--primary);
 }
 
 .timeline-grid {
@@ -117,19 +140,19 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
   justify-items: center;
-  align-items: stretch; /* semua sama tinggi mengikuti yang paling tinggi */
+  align-items: stretch;
 }
 
 .timeline-card {
-  background: white;
+  background: var(--background);
   border-radius: 14px;
   padding: 20px;
-  width: 230px; /* lebar sama */
-  height: 200px; /* tinggi sama */
+  width: 230px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* konten mulai dari atas */
+  justify-content: flex-start;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -155,7 +178,7 @@ body {
 .timeline-card .tanggal {
   font-weight: bold;
   margin: 5px 0;
-  color: #007bff;
+  color: var(--secondary);
 }
 
 .timeline-card .judul {
@@ -165,12 +188,12 @@ body {
 
 /* ======== FOOTER ======== */
 .footer {
-  background: linear-gradient(90deg, #004aad, #007bff);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   padding: 15px 20px;
   text-align: center;
   font-size: 14px;
   margin-top: 50px;
-  color: white;
+  color: var(--text-light);
 }
 
 .footer-content {
@@ -182,13 +205,13 @@ body {
 }
 
 .footer a {
-  color: white;
+  color: var(--text-light);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer a:hover {
-  color: orange;
+  color: var(--accent);
 }
 
 .footer .icon {
@@ -197,15 +220,47 @@ body {
   margin-right: 5px;
 }
 
+/* ======== FLOATING WHATSAPP ======== */
+#floating-wa {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  background: var(--whatsapp);
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+#floating-wa:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  background: #128C7E;
+}
+
 /* ======== RESPONSIF ======== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .timeline-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .timeline-grid {
     grid-template-columns: 1fr;
+  }
+  .header-container {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+  .main-title {
+    font-size: 20px;
+  }
+  .timeline-card {
+    width: 100%;
+    height: auto;
   }
 }
