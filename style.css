@@ -103,6 +103,14 @@ body {
   transition: all 0.3s ease;
 }
 
+/* Tambahkan di bawah .btn */
+.btn-small {
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 6px;
+  margin: 0 4px;
+}
+
 .btn:hover {
   background: linear-gradient(90deg, var(--accent), var(--accent));
   color: var(--text-light);
